@@ -29,7 +29,7 @@ banner.addEventListener('touchmove',(e)=>{
 	newsTouch = e.targetTouches[0].clientX
 })
 banner.addEventListener('touchend',(e)=>{
-	if(startTouch >= (newsTouch-200)){
+	if(newsTouch < (startTouch-100)){
 		let arbannerDots = document.querySelectorAll('#dots-banner p');
 		for(let i = 0; i < arbannerDots.length ; i++){
 			if(arbannerDots[i].classList[0] === 'active' && i !== arbannerDots.length-1 ){
