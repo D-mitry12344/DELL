@@ -115,7 +115,7 @@ body{
 	padding-top: 10px;
 }
 
-.header-banner__header-list__lists li img{
+.header-banner__header-list__lists li:nth-child(5) img{
 	padding-left: 7.5px;
 	padding-top: 10px;
 }
