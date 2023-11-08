@@ -20,14 +20,16 @@ arrayBenner.addEventListener('click',()=>{
 })
 
 let startTouch ;
-
+let newsTouch;
 banner.addEventListener('touchstart',(e)=>{
 	startTouch = e.targetTouches[0].clientX
 })
 
 banner.addEventListener('touchmove',(e)=>{
-	let g = e.targetTouches[0].clientX
-	if(startTouch >= (g-200)){
+	newsTouch = e.targetTouches[0].clientX
+})
+banner.addEventListener('touchend',(e)=>{
+	if(startTouch >= (newsTouch-200)){
 		let arbannerDots = document.querySelectorAll('#dots-banner p');
 		for(let i = 0; i < arbannerDots.length ; i++){
 			if(arbannerDots[i].classList[0] === 'active' && i !== arbannerDots.length-1 ){
