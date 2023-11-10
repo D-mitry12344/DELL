@@ -22,6 +22,10 @@ body{
 	overflow: hidden;
 }
 
+a{
+	color:#000;
+}
+
 .header-banner__header-list{
 	display: flex;
 	height: 76px;
