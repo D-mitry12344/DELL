@@ -1152,6 +1152,8 @@
 		padding-left: 306px;
 		padding-bottom: 57px;
 		border-bottom: 1px solid #a4a4a4;
+		position: relative;
+		z-index: 100;
 	}
 
 	.footer-block__info-item:nth-child(1){
@@ -1190,7 +1192,7 @@
 		font-weight: 300;
 		color: #292D32;
 		padding-top: 10px;
-		width: 250px;
+		width: 250px !important;
 		cursor: pointer;
 		font-size: 16px;
 		line-height: 19px;
@@ -1272,6 +1274,7 @@
 		right: -40px;
     	top: 200px;
 		height: 150px;
+		z-index: 10;
 	}
 }
 
