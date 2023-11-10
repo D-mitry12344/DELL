@@ -74,6 +74,7 @@ body{
 	margin-bottom: 13px;
 }
 
+.header-banner__header-list__menu-myself li a,
 .header-banner__header-list__menu-myself li a:visited{
 	color: #000;
 }
