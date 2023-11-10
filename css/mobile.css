@@ -17,7 +17,7 @@ html{
 }
 
 body{
-	max-width: 375px;
+	width: 375px;
 	margin: 0 auto;
 	overflow: hidden;
 }
@@ -335,6 +335,14 @@ body{
 	width: 5px;
 	height: 5px;
 	background: rgb(0,0,0,0.6);
+}
+
+.header-banner__banner-list__control #array-banner-PC{
+	display: none;
+	width: 90px;
+	height: 20px;
+	z-index: 1000;
+	background: url("../images/mobile/array-banner.svg") no-repeat center;
 }
 
 .header-banner__banner-list__control #array-banner{
@@ -1020,6 +1028,10 @@ body{
 	color: #292D32;
 }
 
+.footer-block__info-item:nth-child(3) ul li{
+	width: 120px;
+}
+
 .footer-block__info-item ul li:hover{
 	opacity: 0.7;
 }
@@ -1030,11 +1042,15 @@ body{
 }
 
 .footer-block__info-item:nth-child(3) div ul:nth-child(2){
-	padding-left: 60px;
+	padding-left: 59px;
 }
 
 .footer-block__info-item:nth-child(3) div ul:nth-child(1){
 	width: 120px;
+}
+
+.footer-block__info-item:nth-child(3) .pc-version{
+	display: none;
 }
 
 .footer__contacts{
@@ -1074,3 +1090,14 @@ body{
 .contacts__social-FB:hover{
 	opacity: 0.7;
 }
+
+.contact-form-back-title-PC{
+	display: none;
+}
+
+.footer-banner__banner-list__item_back-text{
+	display: none;
+}
+
+
+

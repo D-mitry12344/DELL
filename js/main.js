@@ -1,6 +1,7 @@
 const bannerItems = document.querySelectorAll('#banner-item');
 let bannerDots = document.querySelector('#dots-banner');
-const arrayBenner = document.querySelector('#array-banner');
+const arrayBanner = document.querySelector('#array-banner');
+const arrayBannerPc = document.querySelector('#array-banner-PC')
 let banner = document.querySelector('#banner');
 
 let dotsHtml= ``;
@@ -14,7 +15,29 @@ bannerItems.forEach((item,i)=>{
 
 bannerDots.innerHTML=dotsHtml
 
-arrayBenner.addEventListener('click',()=>{
+
+arrayBannerPc.addEventListener('click',()=>{
+	let arbannerDots = document.querySelectorAll('#dots-banner p');
+	for(let i = 0; i < arbannerDots.length ; i++){
+		if(arbannerDots[i].classList[0] === 'active' && i !== arbannerDots.length-1 ){
+			arbannerDots[i].classList.remove('active')
+			arbannerDots[i+1].classList.add('active');
+			banner.style.left=String(Number(banner.style.left.slice(0,-2)) -1410) + 'px';
+			break
+		}
+		if(arbannerDots[i].classList[0] === 'active' && i == arbannerDots.length-1 ){
+			arbannerDots[i].classList.remove('active')
+			arbannerDots[0].classList.add('active');
+			banner.style.left='0px';
+			break
+		}
+	}	 
+	return banner.style.marginLeft;
+})
+
+
+
+arrayBanner.addEventListener('click',()=>{
 	let arbannerDots = document.querySelectorAll('#dots-banner p');
 	for(let i = 0; i < arbannerDots.length ; i++){
 		if(arbannerDots[i].classList[0] === 'active' && i !== arbannerDots.length-1 ){
@@ -32,6 +55,23 @@ arrayBenner.addEventListener('click',()=>{
 	}	 
 	return banner.style.marginLeft;
 })
+
+
+const smoothLinks = document.querySelectorAll('a[href^="#"]');
+for (let smoothLink of smoothLinks) {
+    smoothLink.addEventListener('click', function (e) {
+        e.preventDefault();
+        const id = smoothLink.getAttribute('href');
+
+        document.querySelector(id).scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+    });
+};
+	
+
+
 
 
 let burger = document.querySelector('#burger');
