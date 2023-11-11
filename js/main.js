@@ -90,3 +90,16 @@ burger.addEventListener('click',()=>{
 		document.querySelector('html').style.overflow='hidden';
 	}
 })
+
+const userMenu = document.querySelector('#user-menu');
+
+userMenu.addEventListener('click',()=>{
+	document.querySelector('.PC-name-user').style.transform='scale(1)';
+	document.querySelector('.PC-menu-user').style.transform='scale(1)';
+	let closeUserMenu = document.getElementById('close-user-menu');
+	closeUserMenu.addEventListener('click',()=>{
+		document.querySelector('.PC-name-user').style.transform='';
+		document.querySelector('.PC-menu-user').style.transform='';
+	})
+})
+

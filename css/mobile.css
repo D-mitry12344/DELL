@@ -26,6 +26,14 @@ a{
 	color:#000;
 }
 
+.PC-menu-user{
+	display: none;
+}
+
+.PC-name-user{
+	display: none;
+}
+
 .header-banner__header-list{
 	display: flex;
 	height: 76px;
